@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F45811D2088C37200CB6ED0 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F45811C2088C37100CB6ED0 /* Delm-Medium.otf */; };
+		3F45811F2088C47200CB6ED0 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F45811E2088C47200CB6ED0 /* ThirstySoftRegular.otf */; };
 		3F7FF5942087BC1D00FF778D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7FF5932087BC1D00FF778D /* AppDelegate.swift */; };
 		3F7FF5962087BC1D00FF778D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7FF5952087BC1D00FF778D /* ViewController.swift */; };
 		3F7FF5992087BC1D00FF778D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7FF5972087BC1D00FF778D /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F45811C2088C37100CB6ED0 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		3F45811E2088C47200CB6ED0 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		3F7FF5902087BC1D00FF778D /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7FF5932087BC1D00FF778D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7FF5952087BC1D00FF778D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,12 +81,16 @@
 		3F7FF5922087BC1D00FF778D /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				3F7FF5B42087BCE100FF778D /* Supporting Files */,
+				3F7FF59F2087BC1E00FF778D /* Info.plist */,
+				3F45811C2088C37100CB6ED0 /* Delm-Medium.otf */,
+				3F45811E2088C47200CB6ED0 /* ThirstySoftRegular.otf */,
 				3F7FF5932087BC1D00FF778D /* AppDelegate.swift */,
-				3F7FF5952087BC1D00FF778D /* ViewController.swift */,
-				3F7FF5972087BC1D00FF778D /* Main.storyboard */,
 				3F7FF59A2087BC1E00FF778D /* Assets.xcassets */,
 				3F7FF59C2087BC1E00FF778D /* LaunchScreen.storyboard */,
-				3F7FF59F2087BC1E00FF778D /* Info.plist */,
+				3F7FF5B52087BCF300FF778D /* Model */,
+				3F7FF5B72087BD2100FF778D /* View */,
+				3F7FF5B82087BD4300FF778D /* Controller */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -94,6 +102,36 @@
 				3F7FF5AA2087BC1E00FF778D /* Info.plist */,
 			);
 			path = InstagridTests;
+			sourceTree = "<group>";
+		};
+		3F7FF5B42087BCE100FF778D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F7FF5B52087BCF300FF778D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F7FF5B72087BD2100FF778D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F7FF5972087BC1D00FF778D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F7FF5B82087BD4300FF778D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F7FF5952087BC1D00FF778D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +217,8 @@
 			files = (
 				3F7FF59E2087BC1E00FF778D /* LaunchScreen.storyboard in Resources */,
 				3F7FF59B2087BC1E00FF778D /* Assets.xcassets in Resources */,
+				3F45811F2088C47200CB6ED0 /* ThirstySoftRegular.otf in Resources */,
+				3F45811D2088C37200CB6ED0 /* Delm-Medium.otf in Resources */,
 				3F7FF5992087BC1D00FF778D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = William.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -386,7 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = William.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
