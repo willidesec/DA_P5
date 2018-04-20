@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var squareView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Square Shadow
+        squareView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 50).cgColor
+        squareView.layer.shadowRadius = 4
+        squareView.layer.shadowOpacity = 0.5
+        squareView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        
     }
 
     override func didReceiveMemoryWarning() {
