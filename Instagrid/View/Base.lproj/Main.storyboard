@@ -37,11 +37,51 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-gk-c92">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-gk-c92" customClass="gridView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="38" y="194.5" width="300" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2w3-rl-VbE">
+                                        <rect key="frame" x="15" y="14.5" width="270" height="127.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZGZ-ul-geL">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DxQ-dt-gBv">
+                                                <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DxQ-dt-gBv" firstAttribute="width" secondItem="ZGZ-ul-geL" secondAttribute="width" id="4tY-kr-bAd"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-6D-k7c">
+                                        <rect key="frame" x="15" y="157" width="270" height="127.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-Xq-eps">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ay9-fV-NEH">
+                                                <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ay9-fV-NEH" firstAttribute="width" secondItem="NeR-Xq-eps" secondAttribute="width" id="VmV-pL-d3L"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.062745098039215685" green="0.40000000000000002" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ExQ-6D-k7c" firstAttribute="height" secondItem="2w3-rl-VbE" secondAttribute="height" id="6AS-Q9-5Pd"/>
+                                    <constraint firstItem="2w3-rl-VbE" firstAttribute="centerX" secondItem="FQS-gk-c92" secondAttribute="centerX" id="74E-4u-mMu"/>
+                                    <constraint firstItem="2w3-rl-VbE" firstAttribute="leading" secondItem="FQS-gk-c92" secondAttribute="leading" constant="15" id="Glp-lN-fna"/>
                                     <constraint firstAttribute="width" secondItem="FQS-gk-c92" secondAttribute="height" multiplier="1:1" id="Gvh-pg-Pbv"/>
+                                    <constraint firstAttribute="bottom" secondItem="ExQ-6D-k7c" secondAttribute="bottom" constant="15" id="HqQ-M2-z7c"/>
+                                    <constraint firstAttribute="trailing" secondItem="ExQ-6D-k7c" secondAttribute="trailing" constant="15" id="TK7-Ml-cl3"/>
+                                    <constraint firstItem="ExQ-6D-k7c" firstAttribute="leading" secondItem="FQS-gk-c92" secondAttribute="leading" constant="15" id="blD-T8-cr9"/>
+                                    <constraint firstItem="ExQ-6D-k7c" firstAttribute="centerX" secondItem="2w3-rl-VbE" secondAttribute="centerX" id="uHf-Hj-qvW"/>
+                                    <constraint firstItem="ExQ-6D-k7c" firstAttribute="top" secondItem="2w3-rl-VbE" secondAttribute="bottom" constant="15" id="vd0-6R-xSk"/>
+                                    <constraint firstAttribute="trailing" secondItem="2w3-rl-VbE" secondAttribute="trailing" constant="15" id="xDO-ZX-Wdu"/>
+                                    <constraint firstItem="2w3-rl-VbE" firstAttribute="top" secondItem="FQS-gk-c92" secondAttribute="top" constant="15" id="zlI-bN-zrI"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OTZ-bO-sCc">
