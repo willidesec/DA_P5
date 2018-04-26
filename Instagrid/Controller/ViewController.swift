@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var squareView: UIView!
-    
+    @IBOutlet weak var squareView: gridView!
+    @IBOutlet weak var layout1Button: UIButton!
+    @IBOutlet weak var layout2Button: UIButton!
+    @IBOutlet weak var layout3Button: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,54 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Layout Button
+    @IBAction func changeToLayout1(_ sender: UIButton) {
+        squareView.imageView4.isHidden = false
+        squareView.imageView2.isHidden = true
+        
+        layout1Button.setImage(#imageLiteral(resourceName: "Selected"), for: UIControlState.normal)
+        
+        if layout2Button.imageView != nil {
+            layout2Button.setImage(nil, for: .normal)
+        }
 
+        if layout3Button.imageView != nil {
+            layout3Button.setImage(nil, for: .normal)
+        }
+    }
+    
+    @IBAction func changeToLayout2(_ sender: UIButton) {
+        squareView.imageView2.isHidden = false
+        squareView.imageView4.isHidden = true
+        
+        layout2Button.setImage(#imageLiteral(resourceName: "Selected"), for: UIControlState.normal)
 
+        if layout1Button.imageView != nil {
+            layout1Button.setImage(nil, for: .normal)
+        }
+
+        if layout3Button.imageView != nil {
+            layout3Button.setImage(nil, for: .normal)
+        }
+    }
+    
+    @IBAction func changeToLayout3(_ sender: UIButton) {
+        squareView.imageView2.isHidden = false
+        squareView.imageView4.isHidden = false
+        
+        layout3Button.setImage(#imageLiteral(resourceName: "Selected"), for: UIControlState.normal)
+        
+        if layout2Button.imageView != nil {
+            layout2Button.setImage(nil, for: .normal)
+        }
+
+        if layout1Button.imageView != nil {
+            layout1Button.setImage(nil, for: .normal)
+        }
+    }
+    
+
+    
 }
 
