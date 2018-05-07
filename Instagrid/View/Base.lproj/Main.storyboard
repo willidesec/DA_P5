@@ -78,9 +78,12 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-xV-UCz" userLabel="Top Left Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
-                                                                <rect key="frame" x="39" y="40" width="48" height="48"/>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
+                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
+                                                                <connections>
+                                                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYH-v4-Qtt"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,9 +102,12 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
                                                                 <rect key="frame" x="39" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
+                                                                <connections>
+                                                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-AM-W6y"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,9 +131,12 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
                                                                 <rect key="frame" x="39" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
+                                                                <connections>
+                                                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg3-po-ffY"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,9 +155,12 @@
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
                                                                 <rect key="frame" x="39" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
+                                                                <connections>
+                                                                    <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UK-tk-HdJ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,25 +191,42 @@
                                     <outletCollection property="ImageViews" destination="RsA-hs-XD5" collectionClass="NSMutableArray" id="Men-x6-6dA"/>
                                     <outletCollection property="ImageViews" destination="Shw-A5-c51" collectionClass="NSMutableArray" id="Aeh-Lk-aSr"/>
                                     <outletCollection property="ImageViews" destination="bFb-9M-jjs" collectionClass="NSMutableArray" id="s9E-pD-cB0"/>
+                                    <outletCollection property="Views" destination="d27-sB-idr" collectionClass="NSMutableArray" id="uwx-NL-Cnp"/>
+                                    <outletCollection property="Views" destination="38W-D4-Z7j" collectionClass="NSMutableArray" id="FNA-Uw-bpz"/>
+                                    <outletCollection property="Views" destination="BvX-Ml-n3x" collectionClass="NSMutableArray" id="Wgu-4p-ygU"/>
+                                    <outletCollection property="Views" destination="Qiw-9a-oUP" collectionClass="NSMutableArray" id="jvv-7W-1tk"/>
+                                    <outletCollection property="addButtons" destination="XwI-3p-27M" collectionClass="NSMutableArray" id="Dkt-g9-XYs"/>
+                                    <outletCollection property="addButtons" destination="g67-6X-Zat" collectionClass="NSMutableArray" id="jgt-Zg-yFB"/>
+                                    <outletCollection property="addButtons" destination="VYf-e0-lso" collectionClass="NSMutableArray" id="Kcl-IM-3mB"/>
+                                    <outletCollection property="addButtons" destination="J6R-wg-jU4" collectionClass="NSMutableArray" id="pkE-ub-dtP"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jac-y7-rJa" userLabel="Layout Button Stack View">
                                 <rect key="frame" x="47.5" y="523.5" width="280" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loL-dn-rwZ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loL-dn-rwZ">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kss-y4-ISR"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-pH-okb">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-pH-okb">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dp-h5-0Qs"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-uG-yx8">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-uG-yx8">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RCZ-ux-EcY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
@@ -257,6 +286,9 @@
                     </view>
                     <connections>
                         <outlet property="squareView" destination="xev-Ub-4Yg" id="ULu-ST-jOT"/>
+                        <outletCollection property="layoutButtons" destination="loL-dn-rwZ" collectionClass="NSMutableArray" id="f28-24-rWp"/>
+                        <outletCollection property="layoutButtons" destination="mWM-pH-okb" collectionClass="NSMutableArray" id="OuH-MY-Hzt"/>
+                        <outletCollection property="layoutButtons" destination="rcn-uG-yx8" collectionClass="NSMutableArray" id="gA6-zC-HfN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
