@@ -75,7 +75,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d27-sB-idr" userLabel="Top Left View">
                                                         <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-xV-UCz" userLabel="Top Left Image View">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-xV-UCz" userLabel="Top Left Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
@@ -99,7 +99,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38W-D4-Z7j" userLabel="Top Right View">
                                                         <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
+                                                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
@@ -128,7 +128,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvX-Ml-n3x" userLabel="Bottom Left View">
                                                         <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
+                                                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
@@ -152,7 +152,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9a-oUP" userLabel="Bottom Right View">
                                                         <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
+                                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
