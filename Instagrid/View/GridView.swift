@@ -15,12 +15,29 @@ class GridView: UIView {
     @IBOutlet var views: [UIView]!
     @IBOutlet var addButtons: [UIButton]!
     
-    // A function do add Corner Radius to buttons
+    // MARK: - Methods
+    
+    // A function to add Corner to ImageViews
     func addImageViewCorner() {
-        
         for aImageView in imageViews {
             aImageView.layer.cornerRadius = 2
         }
+    }
+    
+    // Functions to display the different patterns
+    func displayPatter1() {
+        views[3].isHidden = false
+        views[1].isHidden = true
+    }
+    
+    func displayPattern2() {
+        views[1].isHidden = false
+        views[3].isHidden = true
+    }
+    
+    func displayPattern3() {
+        views[1].isHidden = false
+        views[3].isHidden = false
     }
     
 

@@ -63,23 +63,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xev-Ub-4Yg" userLabel="Square View" customClass="GridView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="38" y="184" width="299" height="299.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xev-Ub-4Yg" customClass="GridView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="38" y="184" width="299" height="299"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gA3-8u-Mzs">
-                                        <rect key="frame" x="15" y="15" width="269" height="269.5"/>
+                                        <rect key="frame" x="15" y="15" width="269" height="269"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ksk-mQ-2rX" userLabel="Top Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="269" height="127.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="127"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d27-sB-idr" userLabel="Top Left View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-xV-UCz" userLabel="Top Left Image View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
+                                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-xV-UCz" userLabel="Top Left Image View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
-                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
+                                                                <rect key="frame" x="40" y="39" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYH-v4-Qtt"/>
@@ -97,13 +97,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38W-D4-Z7j" userLabel="Top Right View">
-                                                        <rect key="frame" x="142" y="0.0" width="127" height="127.5"/>
+                                                        <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127.5"/>
+                                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
-                                                                <rect key="frame" x="39" y="40" width="48" height="48"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
+                                                                <rect key="frame" x="39" y="39" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-AM-W6y"/>
@@ -123,15 +123,15 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="61g-RX-lhh" userLabel="Bottom Stack View">
-                                                <rect key="frame" x="0.0" y="142.5" width="269" height="127"/>
+                                                <rect key="frame" x="0.0" y="142" width="269" height="127"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvX-Ml-n3x" userLabel="Bottom Left View">
                                                         <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
+                                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
                                                                 <rect key="frame" x="39" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
@@ -152,10 +152,10 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9a-oUP" userLabel="Bottom Right View">
                                                         <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
+                                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
                                                                 <rect key="frame" x="39" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
@@ -187,22 +187,22 @@
                                     <constraint firstAttribute="bottom" secondItem="gA3-8u-Mzs" secondAttribute="bottom" constant="15" id="nfJ-8T-7IP"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="ImageViews" destination="zMc-xV-UCz" collectionClass="NSMutableArray" id="oLw-aL-yvF"/>
-                                    <outletCollection property="ImageViews" destination="RsA-hs-XD5" collectionClass="NSMutableArray" id="Men-x6-6dA"/>
-                                    <outletCollection property="ImageViews" destination="Shw-A5-c51" collectionClass="NSMutableArray" id="Aeh-Lk-aSr"/>
-                                    <outletCollection property="ImageViews" destination="bFb-9M-jjs" collectionClass="NSMutableArray" id="s9E-pD-cB0"/>
-                                    <outletCollection property="Views" destination="d27-sB-idr" collectionClass="NSMutableArray" id="uwx-NL-Cnp"/>
-                                    <outletCollection property="Views" destination="38W-D4-Z7j" collectionClass="NSMutableArray" id="FNA-Uw-bpz"/>
-                                    <outletCollection property="Views" destination="BvX-Ml-n3x" collectionClass="NSMutableArray" id="Wgu-4p-ygU"/>
-                                    <outletCollection property="Views" destination="Qiw-9a-oUP" collectionClass="NSMutableArray" id="jvv-7W-1tk"/>
                                     <outletCollection property="addButtons" destination="XwI-3p-27M" collectionClass="NSMutableArray" id="Dkt-g9-XYs"/>
                                     <outletCollection property="addButtons" destination="g67-6X-Zat" collectionClass="NSMutableArray" id="jgt-Zg-yFB"/>
                                     <outletCollection property="addButtons" destination="VYf-e0-lso" collectionClass="NSMutableArray" id="Kcl-IM-3mB"/>
                                     <outletCollection property="addButtons" destination="J6R-wg-jU4" collectionClass="NSMutableArray" id="pkE-ub-dtP"/>
+                                    <outletCollection property="imageViews" destination="zMc-xV-UCz" collectionClass="NSMutableArray" id="JGB-dA-Jc2"/>
+                                    <outletCollection property="imageViews" destination="RsA-hs-XD5" collectionClass="NSMutableArray" id="5eX-wg-8Nd"/>
+                                    <outletCollection property="imageViews" destination="Shw-A5-c51" collectionClass="NSMutableArray" id="9Nw-Ya-8EX"/>
+                                    <outletCollection property="imageViews" destination="bFb-9M-jjs" collectionClass="NSMutableArray" id="0L8-jX-kLS"/>
+                                    <outletCollection property="views" destination="d27-sB-idr" collectionClass="NSMutableArray" id="iMI-cO-e0B"/>
+                                    <outletCollection property="views" destination="38W-D4-Z7j" collectionClass="NSMutableArray" id="UfZ-fU-B19"/>
+                                    <outletCollection property="views" destination="BvX-Ml-n3x" collectionClass="NSMutableArray" id="EPM-MQ-U2b"/>
+                                    <outletCollection property="views" destination="Qiw-9a-oUP" collectionClass="NSMutableArray" id="rvO-Ww-J3c"/>
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jac-y7-rJa" userLabel="Layout Button Stack View">
-                                <rect key="frame" x="47.5" y="523.5" width="280" height="80"/>
+                                <rect key="frame" x="47.5" y="523" width="280" height="80"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loL-dn-rwZ">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -285,7 +285,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="squareView" destination="xev-Ub-4Yg" id="ULu-ST-jOT"/>
+                        <outlet property="gridView" destination="xev-Ub-4Yg" id="dkC-kL-fTa"/>
                         <outletCollection property="layoutButtons" destination="loL-dn-rwZ" collectionClass="NSMutableArray" id="f28-24-rWp"/>
                         <outletCollection property="layoutButtons" destination="mWM-pH-okb" collectionClass="NSMutableArray" id="OuH-MY-Hzt"/>
                         <outletCollection property="layoutButtons" destination="rcn-uG-yx8" collectionClass="NSMutableArray" id="gA6-zC-HfN"/>
