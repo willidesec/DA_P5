@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var gridView: GridView!
     @IBOutlet var layoutButtons: [UIButton]!
     
-    // MARK: - Var
+    // MARK: - Properties
     var tag: Int? = nil
     let imagePickerController = UIImagePickerController()
     var swipeGestureRecognizer: UISwipeGestureRecognizer!
@@ -40,17 +40,6 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func deviceOrientationDidChange() {
-        let currentOrientation = UIDevice.current.orientation
-        if currentOrientation.isLandscape {
-            swipeGestureRecognizer.direction = .left
-        } else if currentOrientation.isPortrait {
-            swipeGestureRecognizer.direction = .up
-        }
-    }
-    
-
-
     // MARK: - Methods
     
     // A function to change the layout of the square view
@@ -80,6 +69,16 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func deviceOrientationDidChange() {
+        let currentOrientation = UIDevice.current.orientation
+        if currentOrientation.isLandscape {
+            swipeGestureRecognizer.direction = .left
+        } else if currentOrientation.isPortrait {
+            swipeGestureRecognizer.direction = .up
+        }
+    }
+    
+    
     // MARK: - UIGestureRecognizer
     
     @objc func gridViewSwiped(_ sender: UISwipeGestureRecognizer) {
@@ -89,6 +88,12 @@ class ViewController: UIViewController {
             gridView.animateSwipe(translationX: 0, y: -view.frame.height)
         }
         share()
+        
+        // When UIActivityViewController is dismissed, gridView go back to the center
+        activityController.completionWithItemsHandler = { (activityType, completed: Bool, returnedItems: [Any]?, error: Error?) in
+            self.gridView.animateBackToCenter()
+        }
+        
     }
     
     // MARK: - UIActivityViewController
@@ -105,7 +110,6 @@ class ViewController: UIViewController {
     }
     
 }
-
     
 // MARK: - UIImagePickerController
     
