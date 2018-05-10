@@ -17,17 +17,39 @@ class ViewController: UIViewController {
     // MARK: - Var
     var tag: Int? = nil
     let imagePickerController = UIImagePickerController()
+    var swipeGestureRecognizer: UISwipeGestureRecognizer!
+    var activityController: UIActivityViewController!
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Square Shadow
-        addShadow()
+        gridView.addShadow()
         
         // Image Corner
-        gridView.addImageViewCorner()
+        gridView.addViewCorner()
+        
+        // Swipe Grid
+        swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
+        swipeGestureRecognizer.direction = .up
+        self.view.addGestureRecognizer(swipeGestureRecognizer)
+        
+        // Notification when Device's Orientation did change
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
     }
+    
+    @objc func deviceOrientationDidChange() {
+        let currentOrientation = UIDevice.current.orientation
+        if currentOrientation.isLandscape {
+            swipeGestureRecognizer.direction = .left
+        } else if currentOrientation.isPortrait {
+            swipeGestureRecognizer.direction = .up
+        }
+    }
+    
+
 
     // MARK: - Methods
     
@@ -58,13 +80,30 @@ class ViewController: UIViewController {
         }
     }
     
-   // A function to add a shadow to the Square
-    func addShadow() {
-        gridView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 50).cgColor
-        gridView.layer.shadowRadius = 4
-        gridView.layer.shadowOpacity = 0.5
-        gridView.layer.shadowOffset = CGSize(width: 0, height: 2)
+    // MARK: - UIGestureRecognizer
+    
+    @objc func gridViewSwiped(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isLandscape {
+            gridView.animateSwipe(translationX: -view.frame.width, y: 0)
+        } else {
+            gridView.animateSwipe(translationX: 0, y: -view.frame.height)
+        }
+        share()
     }
+    
+    // MARK: - UIActivityViewController
+    
+    func share() {
+        
+        UIGraphicsBeginImageContext(gridView.frame.size)
+        gridView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+        
+        activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+        
+    }
+    
 }
 
     

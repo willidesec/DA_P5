@@ -18,10 +18,18 @@ class GridView: UIView {
     // MARK: - Methods
     
     // A function to add Corner to ImageViews
-    func addImageViewCorner() {
-        for aImageView in imageViews {
-            aImageView.layer.cornerRadius = 2
+    func addViewCorner() {
+        for aView in views {
+            aView.layer.cornerRadius = 2
         }
+    }
+    
+    // A function to add a shadow to the Square
+    func addShadow() {
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 50).cgColor
+        self.layer.shadowRadius = 4
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
     }
     
     // Functions to display the different patterns
@@ -38,6 +46,21 @@ class GridView: UIView {
     func displayPattern3() {
         views[1].isHidden = false
         views[3].isHidden = false
+    }
+    
+    
+    // MARK: - Animations
+    
+    func animateSwipe(translationX x: CGFloat, y: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.transform = CGAffineTransform(translationX: x, y: y)
+        })
+    }
+    
+    func animateBackToCenter() {
+        UIView.animate(withDuration: 0.5) {
+            self.transform = .identity
+        }
     }
     
 
