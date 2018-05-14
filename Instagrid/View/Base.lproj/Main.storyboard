@@ -135,7 +135,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
-                                                                <rect key="frame" x="40" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg3-po-ffY"/>
@@ -159,7 +159,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
-                                                                <rect key="frame" x="39.5" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UK-tk-HdJ"/>
@@ -235,7 +235,7 @@
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-8B-M1A">
-                                <rect key="frame" x="162" y="611" width="52" height="41"/>
+                                <rect key="frame" x="161.5" y="611" width="52" height="41"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -249,6 +249,7 @@
                         <constraints>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="top" secondItem="5I5-CB-HE6" secondAttribute="bottom" constant="15" id="6gG-Ti-DOb"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="centerY" secondItem="xev-Ub-4Yg" secondAttribute="centerY" id="9Ge-cT-kYP"/>
+                            <constraint firstItem="WUe-8B-M1A" firstAttribute="top" secondItem="5I5-CB-HE6" secondAttribute="bottom" constant="28" id="9wv-U4-Lck"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xev-Ub-4Yg" secondAttribute="bottom" constant="15" id="IUV-ei-Abs"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="top" secondItem="5RJ-na-1PP" secondAttribute="bottom" constant="15" id="L8q-Ra-1Gh"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qit-X8-Jdj"/>
@@ -267,6 +268,7 @@
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerX" secondItem="5I5-CB-HE6" secondAttribute="centerX" id="sHd-de-Ly9"/>
+                            <constraint firstItem="WUe-8B-M1A" firstAttribute="centerX" secondItem="5I5-CB-HE6" secondAttribute="centerX" id="w3N-qx-0DE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -276,6 +278,8 @@
                                 <exclude reference="Qit-X8-Jdj"/>
                                 <exclude reference="RWU-bm-z7x"/>
                                 <exclude reference="qv9-fc-h8O"/>
+                                <exclude reference="9wv-U4-Lck"/>
+                                <exclude reference="w3N-qx-0DE"/>
                                 <exclude reference="9Ge-cT-kYP"/>
                                 <exclude reference="edc-7k-9Kc"/>
                             </mask>
@@ -292,6 +296,10 @@
                                 <exclude reference="WWA-tI-arK"/>
                                 <include reference="qv9-fc-h8O"/>
                                 <exclude reference="sHd-de-Ly9"/>
+                                <include reference="9wv-U4-Lck"/>
+                                <exclude reference="aPT-WA-Zi5"/>
+                                <exclude reference="bYt-Vw-0r3"/>
+                                <include reference="w3N-qx-0DE"/>
                                 <include reference="9Ge-cT-kYP"/>
                                 <include reference="edc-7k-9Kc"/>
                                 <exclude reference="izM-0d-Rvy"/>
