@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
         <array key="ThirstySoftRegular.otf">
             <string>ThirstySoftRegular</string>
         </array>
@@ -79,7 +82,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
-                                                                <rect key="frame" x="40" y="39" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYH-v4-Qtt"/>
@@ -103,7 +106,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
-                                                                <rect key="frame" x="39" y="39" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-AM-W6y"/>
@@ -132,7 +135,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
-                                                                <rect key="frame" x="39" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg3-po-ffY"/>
@@ -156,7 +159,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
-                                                                <rect key="frame" x="39" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UK-tk-HdJ"/>
@@ -231,6 +234,16 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-8B-M1A">
+                                <rect key="frame" x="162" y="611" width="52" height="41"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78W-dB-kfa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -242,6 +255,8 @@
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerY" secondItem="5I5-CB-HE6" secondAttribute="centerY" id="RWU-bm-z7x"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="WB9-65-YQd"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WWA-tI-arK"/>
+                            <constraint firstItem="WUe-8B-M1A" firstAttribute="centerX" secondItem="xev-Ub-4Yg" secondAttribute="centerX" id="aPT-WA-Zi5"/>
+                            <constraint firstItem="WUe-8B-M1A" firstAttribute="top" secondItem="jac-y7-rJa" secondAttribute="bottom" constant="8" id="bYt-Vw-0r3"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="leading" secondItem="xev-Ub-4Yg" secondAttribute="trailing" constant="30" id="edc-7k-9Kc"/>
                             <constraint firstItem="5RJ-na-1PP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="exk-Ek-yN9"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="top" secondItem="xev-Ub-4Yg" secondAttribute="bottom" constant="40" id="izM-0d-Rvy"/>

@@ -49,4 +49,16 @@ class GridView: UIView {
         views[3].isHidden = false
     }
     
+    func displayAddButtons() {
+        for buttons in addButtons {
+            buttons.isHidden = false
+        }
+    }
+    
+    func resetImageViews() {
+        for image in imageViews {
+            image.image = nil
+        }
+    }
+    
 }

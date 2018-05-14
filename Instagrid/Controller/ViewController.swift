@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         
         imagePickerController.delegate = self
         
-        
     }
     
     // MARK: - Methods
@@ -80,6 +79,12 @@ class ViewController: UIViewController {
         } else if currentOrientation.isPortrait {
             swipeGestureRecognizer?.direction = .up
         }
+    }
+    
+    // A function to reset all the images
+    @IBAction func resetButtonDidTapped(_ sender: UIButton) {
+        gridView.resetImageViews()
+        gridView.displayAddButtons()
     }
     
     
@@ -132,7 +137,6 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     
     // Add image from Library
     @IBAction func importImage(_ sender: UIButton) {
-        
         imagePickerController.sourceType = .photoLibrary
         tag = sender.tag
         present(imagePickerController, animated: true)
