@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class GridView: UIView {
 
     // MARK: - Outlet
@@ -48,20 +49,4 @@ class GridView: UIView {
         views[3].isHidden = false
     }
     
-    
-    // MARK: - Animations
-    
-    func animateSwipe(translationX x: CGFloat, y: CGFloat) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.transform = CGAffineTransform(translationX: x, y: y)
-        })
-    }
-    
-    func animateBackToCenter() {
-        UIView.animate(withDuration: 0.5) {
-            self.transform = .identity
-        }
-    }
-    
-
 }

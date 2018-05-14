@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     var tag: Int? = nil
     let imagePickerController = UIImagePickerController()
-    var swipeGestureRecognizer: UISwipeGestureRecognizer!
-    var activityController: UIActivityViewController!
+    var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -32,30 +31,30 @@ class ViewController: UIViewController {
         
         // Swipe Grid
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
+        guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
         swipeGestureRecognizer.direction = .up
-        self.view.addGestureRecognizer(swipeGestureRecognizer)
+        gridView.addGestureRecognizer(swipeGestureRecognizer)
         
         // Notification when Device's Orientation did change
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
+        imagePickerController.delegate = self
     }
     
     // MARK: - Methods
     
     // A function to change the layout of the square view
     @IBAction func changeLayout(_ sender: UIButton) {
+        layoutButtonNotSelected()
         switch sender.tag {
         case 1:
             gridView.displayPatter1()
-            layoutButtonNotSelected()
             layoutButtons[0].isSelected = true
         case 2:
             gridView.displayPattern2()
-            layoutButtonNotSelected()
             layoutButtons[1].isSelected = true
         case 3:
             gridView.displayPattern3()
-            layoutButtonNotSelected()
             layoutButtons[2].isSelected = true
         default:
             break
@@ -72,9 +71,9 @@ class ViewController: UIViewController {
     @objc func deviceOrientationDidChange() {
         let currentOrientation = UIDevice.current.orientation
         if currentOrientation.isLandscape {
-            swipeGestureRecognizer.direction = .left
+            swipeGestureRecognizer?.direction = .left
         } else if currentOrientation.isPortrait {
-            swipeGestureRecognizer.direction = .up
+            swipeGestureRecognizer?.direction = .up
         }
     }
     
@@ -83,30 +82,49 @@ class ViewController: UIViewController {
     
     @objc func gridViewSwiped(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape {
-            gridView.animateSwipe(translationX: -view.frame.width, y: 0)
+            animateSwipe(translationX: -view.frame.width, y: 0)
         } else {
-            gridView.animateSwipe(translationX: 0, y: -view.frame.height)
+            animateSwipe(translationX: 0, y: -view.frame.height)
         }
         share()
-        
-        // When UIActivityViewController is dismissed, gridView go back to the center
-        activityController.completionWithItemsHandler = { (activityType, completed: Bool, returnedItems: [Any]?, error: Error?) in
-            self.gridView.animateBackToCenter()
+    }
+    
+    // MARK: - Animations
+    
+    func animateSwipe(translationX x: CGFloat, y: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.gridView.transform = CGAffineTransform(translationX: x, y: y)
+        })
+    }
+    
+    func animateBackToCenter() {
+        UIView.animate(withDuration: 0.5) {
+            self.gridView.transform = .identity
         }
-        
     }
     
     // MARK: - UIActivityViewController
     
+    func displaySharePopUp(image: UIImage) {
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+        activityViewController.completionWithItemsHandler = { activity, completed, items, error in
+            self.animateBackToCenter()
+            
+        }
+    }
+    
+    func convertGridViewToImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(gridView.bounds.size, gridView.isOpaque, 0.0)
+        gridView.drawHierarchy(in: gridView.bounds, afterScreenUpdates: true)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
     func share() {
-        
-        UIGraphicsBeginImageContext(gridView.frame.size)
-        gridView.layer.render(in: UIGraphicsGetCurrentContext()!)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
-        
-        activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        present(activityController, animated: true, completion: nil)
-        
+        guard let image = convertGridViewToImage() else { return }
+        displaySharePopUp(image: image)
     }
     
 }
@@ -117,7 +135,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     
     // Add image from Library
     @IBAction func importImage(_ sender: UIButton) {
-        imagePickerController.delegate = self
+        
         imagePickerController.sourceType = .photoLibrary
         tag = sender.tag
         present(imagePickerController, animated: true)
@@ -141,12 +159,12 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     }
     
     @objc func tappedImage(_ sender: UITapGestureRecognizer) {
-        imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
         tag = sender.view?.tag
         self.present(imagePickerController, animated: true)
     }
 }
+
     
 
 
