@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         // Image Corner
         gridView.addViewCorner()
         
+        gridView.displayPattern2()
+        layoutButtons[1].isSelected = true
+        
         // Swipe Grid
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
@@ -39,6 +42,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
         imagePickerController.delegate = self
+        
+        
     }
     
     // MARK: - Methods
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
         layoutButtonNotSelected()
         switch sender.tag {
         case 1:
-            gridView.displayPatter1()
+            gridView.displayPattern1()
             layoutButtons[0].isSelected = true
         case 2:
             gridView.displayPattern2()
@@ -114,16 +119,8 @@ class ViewController: UIViewController {
         }
     }
     
-    func convertGridViewToImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(gridView.bounds.size, gridView.isOpaque, 0.0)
-        gridView.drawHierarchy(in: gridView.bounds, afterScreenUpdates: true)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
     func share() {
-        guard let image = convertGridViewToImage() else { return }
+        guard let image = GridManager.convertGridViewToImage(gridView: gridView) else { return }
         displaySharePopUp(image: image)
     }
     

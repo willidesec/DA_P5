@@ -16,6 +16,7 @@
 		3F7FF59E2087BC1E00FF778D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7FF59C2087BC1E00FF778D /* LaunchScreen.storyboard */; };
 		3F7FF5A92087BC1E00FF778D /* InstagridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7FF5A82087BC1E00FF778D /* InstagridTests.swift */; };
 		3FA271C3208E403C0053D884 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA271C2208E403C0053D884 /* GridView.swift */; };
+		3FA4D57B20A9B91600BB6659 /* GridManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D57A20A9B91600BB6659 /* GridManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3F7FF5A82087BC1E00FF778D /* InstagridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagridTests.swift; sourceTree = "<group>"; };
 		3F7FF5AA2087BC1E00FF778D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA271C2208E403C0053D884 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GridView.swift; path = Instagrid/View/GridView.swift; sourceTree = SOURCE_ROOT; };
+		3FA4D57A20A9B91600BB6659 /* GridManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		3F7FF5B52087BCF300FF778D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3FA4D57A20A9B91600BB6659 /* GridManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA271C3208E403C0053D884 /* GridView.swift in Sources */,
+				3FA4D57B20A9B91600BB6659 /* GridManager.swift in Sources */,
 				3F7FF5962087BC1D00FF778D /* ViewController.swift in Sources */,
 				3F7FF5942087BC1D00FF778D /* AppDelegate.swift in Sources */,
 			);

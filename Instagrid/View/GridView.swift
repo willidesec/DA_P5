@@ -34,7 +34,7 @@ class GridView: UIView {
     }
     
     // Functions to display the different patterns
-    func displayPatter1() {
+    func displayPattern1() {
         views[3].isHidden = false
         views[1].isHidden = true
     }
