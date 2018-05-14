@@ -137,6 +137,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     
     // Add image from Library
     @IBAction func importImage(_ sender: UIButton) {
+        imagePickerController.modalPresentationStyle = .overCurrentContext
         imagePickerController.sourceType = .photoLibrary
         tag = sender.tag
         present(imagePickerController, animated: true)
@@ -160,6 +161,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     }
     
     @objc func tappedImage(_ sender: UITapGestureRecognizer) {
+        imagePickerController.modalPresentationStyle = .overCurrentContext
         imagePickerController.sourceType = .photoLibrary
         tag = sender.view?.tag
         self.present(imagePickerController, animated: true)

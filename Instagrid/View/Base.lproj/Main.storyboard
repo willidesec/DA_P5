@@ -82,7 +82,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
-                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYH-v4-Qtt"/>
@@ -106,7 +106,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
-                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-AM-W6y"/>
@@ -135,7 +135,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
-                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg3-po-ffY"/>
@@ -159,7 +159,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
-                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UK-tk-HdJ"/>
@@ -250,8 +250,12 @@
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="top" secondItem="5I5-CB-HE6" secondAttribute="bottom" constant="15" id="6gG-Ti-DOb"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="centerY" secondItem="xev-Ub-4Yg" secondAttribute="centerY" id="9Ge-cT-kYP"/>
                             <constraint firstItem="WUe-8B-M1A" firstAttribute="top" secondItem="5I5-CB-HE6" secondAttribute="bottom" constant="28" id="9wv-U4-Lck"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xev-Ub-4Yg" secondAttribute="bottom" constant="15" id="IUV-ei-Abs"/>
-                            <constraint firstItem="xev-Ub-4Yg" firstAttribute="top" secondItem="5RJ-na-1PP" secondAttribute="bottom" constant="15" id="L8q-Ra-1Gh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xev-Ub-4Yg" secondAttribute="bottom" constant="15" id="IUV-ei-Abs">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="xev-Ub-4Yg" firstAttribute="top" secondItem="5RJ-na-1PP" secondAttribute="bottom" constant="15" id="L8q-Ra-1Gh">
+                                <variation key="heightClass=compact" constant="4"/>
+                            </constraint>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qit-X8-Jdj"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="centerY" secondItem="5I5-CB-HE6" secondAttribute="centerY" id="RWU-bm-z7x"/>
                             <constraint firstItem="xev-Ub-4Yg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="WB9-65-YQd"/>
@@ -259,7 +263,9 @@
                             <constraint firstItem="WUe-8B-M1A" firstAttribute="centerX" secondItem="xev-Ub-4Yg" secondAttribute="centerX" id="aPT-WA-Zi5"/>
                             <constraint firstItem="WUe-8B-M1A" firstAttribute="top" secondItem="jac-y7-rJa" secondAttribute="bottom" constant="8" id="bYt-Vw-0r3"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="leading" secondItem="xev-Ub-4Yg" secondAttribute="trailing" constant="30" id="edc-7k-9Kc"/>
-                            <constraint firstItem="5RJ-na-1PP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="exk-Ek-yN9"/>
+                            <constraint firstItem="5RJ-na-1PP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="exk-Ek-yN9">
+                                <variation key="heightClass=compact" constant="4"/>
+                            </constraint>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="top" secondItem="xev-Ub-4Yg" secondAttribute="bottom" constant="40" id="izM-0d-Rvy"/>
                             <constraint firstItem="jac-y7-rJa" firstAttribute="centerX" secondItem="xev-Ub-4Yg" secondAttribute="centerX" id="kgR-8x-H2f"/>
                             <constraint firstItem="5RJ-na-1PP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgP-gd-34z"/>
