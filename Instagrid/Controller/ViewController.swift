@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var layoutButtons: [UIButton]!
     
     // MARK: - Properties
-    var tag: Int? = nil
-    let imagePickerController = UIImagePickerController()
-    var swipeGestureRecognizer: UISwipeGestureRecognizer?
+    private var tag: Int? = nil
+    private let imagePickerController = UIImagePickerController()
+    private  var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     // Function to unselected all the layoutButtons
-    func layoutButtonNotSelected() {
+    private func layoutButtonNotSelected() {
         for button in layoutButtons {
             button.isSelected = false
         }
@@ -90,14 +90,14 @@ class ViewController: UIViewController {
     
     // MARK: - UIGestureRecognizer
     
-    @objc func gridViewSwiped(_ sender: UISwipeGestureRecognizer) {
+    @objc private func gridViewSwiped(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape {
             animateSwipe(translationX: -view.frame.width, y: 0)
         } else {
             animateSwipe(translationX: 0, y: -view.frame.height)
         }
         
-        if gridView.checkIfImageNil() {
+        if !gridView.isAvailableToShare() {
             displaySwipeErrorPopUp()
         } else {
             share()
@@ -106,13 +106,13 @@ class ViewController: UIViewController {
     
     // MARK: - Animations
     
-    func animateSwipe(translationX x: CGFloat, y: CGFloat) {
+    private func animateSwipe(translationX x: CGFloat, y: CGFloat) {
         UIView.animate(withDuration: 0.5, animations: {
             self.gridView.transform = CGAffineTransform(translationX: x, y: y)
         })
     }
     
-    func animateBackToCenter() {
+    private func animateBackToCenter() {
         UIView.animate(withDuration: 0.5) {
             self.gridView.transform = .identity
         }
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
     
     // MARK: - UIAlertController
     
-    func displaySwipeErrorPopUp() {
+    private func displaySwipeErrorPopUp() {
         let myAlert = UIAlertController(title: "Oups", message: "Can't share if all the images are not filling", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (Action) in
             myAlert.dismiss(animated: true, completion: nil)
@@ -134,7 +134,7 @@ class ViewController: UIViewController {
     
     // MARK: - UIActivityViewController
     
-    func displaySharePopUp(image: UIImage) {
+    private func displaySharePopUp(image: UIImage) {
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
         activityViewController.completionWithItemsHandler = { activity, completed, items, error in
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func share() {
+    private func share() {
         guard let image = GridManager.convertGridViewToImage(gridView: gridView) else { return }
         displaySharePopUp(image: image)
     }
@@ -167,8 +167,8 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
             gridView.addButtons[currentTag].isHidden = true
             
             // Make the ImageView clickable
-            let UITapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImage(_:)))
-            gridView.imageViews[currentTag].addGestureRecognizer(UITapRecognizer)
+            let uiTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImage(_:)))
+            gridView.imageViews[currentTag].addGestureRecognizer(uiTapRecognizer)
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -177,7 +177,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
         picker.dismiss(animated: true, completion: nil)
     }
     
-    @objc func tappedImage(_ sender: UITapGestureRecognizer) {
+    @objc private func tappedImage(_ sender: UITapGestureRecognizer) {
         imagePickerController.modalPresentationStyle = .overCurrentContext
         imagePickerController.sourceType = .photoLibrary
         tag = sender.view?.tag

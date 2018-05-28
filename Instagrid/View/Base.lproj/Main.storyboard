@@ -112,7 +112,7 @@
                                                             <constraint firstItem="XwI-3p-27M" firstAttribute="centerX" secondItem="d27-sB-idr" secondAttribute="centerX" id="zuN-Sm-J55"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38W-D4-Z7j" userLabel="Top Right View">
+                                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38W-D4-Z7j" userLabel="Top Right View">
                                                         <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-hs-XD5" userLabel="Top Right Image View">
@@ -141,7 +141,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="61g-RX-lhh" userLabel="Bottom Stack View">
                                                 <rect key="frame" x="0.0" y="142" width="269" height="127"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvX-Ml-n3x" userLabel="Bottom Left View">
+                                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvX-Ml-n3x" userLabel="Bottom Left View">
                                                         <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-A5-c51" userLabel="Bottom Left Image View">
@@ -165,7 +165,7 @@
                                                             <constraint firstItem="VYf-e0-lso" firstAttribute="centerY" secondItem="BvX-Ml-n3x" secondAttribute="centerY" id="cAc-7S-FXv"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9a-oUP" userLabel="Bottom Right View">
+                                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qiw-9a-oUP" userLabel="Bottom Right View">
                                                         <rect key="frame" x="142" y="0.0" width="127" height="127"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-9M-jjs" userLabel="Bottom Right Image View">
