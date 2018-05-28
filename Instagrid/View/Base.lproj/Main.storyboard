@@ -29,9 +29,22 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RJ-na-1PP">
                                 <rect key="frame" x="128.5" y="28" width="118.5" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="A9g-8P-nn9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A9g-8P-nn9"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="A9g-8P-nn9"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5I5-CB-HE6" userLabel="Share Stack View">
                                 <rect key="frame" x="107.5" y="125" width="160.5" height="44"/>
@@ -82,7 +95,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwI-3p-27M" userLabel="Top Left Button">
-                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYH-v4-Qtt"/>
@@ -106,7 +119,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g67-6X-Zat" userLabel="Top Right Button">
-                                                                <rect key="frame" x="40" y="40" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="40" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-AM-W6y"/>
@@ -135,7 +148,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-e0-lso" userLabel="Bottom Left Button">
-                                                                <rect key="frame" x="39.5" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="40" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vg3-po-ffY"/>
@@ -159,7 +172,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="127"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6R-wg-jU4" userLabel="Bottom Right Button">
-                                                                <rect key="frame" x="40" y="39.5" width="48" height="48"/>
+                                                                <rect key="frame" x="39.5" y="39.5" width="48" height="48"/>
                                                                 <state key="normal" image="Combined Shape"/>
                                                                 <connections>
                                                                     <action selector="importImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UK-tk-HdJ"/>
@@ -284,10 +297,10 @@
                                 <exclude reference="Qit-X8-Jdj"/>
                                 <exclude reference="RWU-bm-z7x"/>
                                 <exclude reference="qv9-fc-h8O"/>
-                                <exclude reference="9wv-U4-Lck"/>
-                                <exclude reference="w3N-qx-0DE"/>
                                 <exclude reference="9Ge-cT-kYP"/>
                                 <exclude reference="edc-7k-9Kc"/>
+                                <exclude reference="9wv-U4-Lck"/>
+                                <exclude reference="w3N-qx-0DE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -302,14 +315,14 @@
                                 <exclude reference="WWA-tI-arK"/>
                                 <include reference="qv9-fc-h8O"/>
                                 <exclude reference="sHd-de-Ly9"/>
-                                <include reference="9wv-U4-Lck"/>
-                                <exclude reference="aPT-WA-Zi5"/>
-                                <exclude reference="bYt-Vw-0r3"/>
-                                <include reference="w3N-qx-0DE"/>
                                 <include reference="9Ge-cT-kYP"/>
                                 <include reference="edc-7k-9Kc"/>
                                 <exclude reference="izM-0d-Rvy"/>
                                 <exclude reference="kgR-8x-H2f"/>
+                                <include reference="9wv-U4-Lck"/>
+                                <exclude reference="aPT-WA-Zi5"/>
+                                <exclude reference="bYt-Vw-0r3"/>
+                                <include reference="w3N-qx-0DE"/>
                             </mask>
                         </variation>
                     </view>

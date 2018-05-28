@@ -61,4 +61,30 @@ class GridView: UIView {
         }
     }
     
+    func checkIfImageNil() -> Bool {
+        var imageIsEmpty = true
+        var numberOfViews = 0
+        var numberOfImage = 0
+        
+        for view in views {
+            if !view.isHidden {
+                numberOfViews += 1
+            }
+        }
+        print(numberOfViews)
+        for image in imageViews {
+                if image.image != nil {
+                    numberOfImage += 1
+                }
+            }
+        print(numberOfImage)
+        
+        if numberOfImage >= numberOfViews {
+            imageIsEmpty = false
+        } else {
+            imageIsEmpty = true
+        }
+        return imageIsEmpty
+    }
+    
 }

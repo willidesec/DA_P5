@@ -96,7 +96,12 @@ class ViewController: UIViewController {
         } else {
             animateSwipe(translationX: 0, y: -view.frame.height)
         }
-        share()
+        
+        if gridView.checkIfImageNil() {
+            displaySwipeErrorPopUp()
+        } else {
+            share()
+        }
     }
     
     // MARK: - Animations
@@ -113,6 +118,20 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - UIAlertController
+    
+    func displaySwipeErrorPopUp() {
+        let myAlert = UIAlertController(title: "Oups", message: "Can't share if all the images are not filling", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (Action) in
+            myAlert.dismiss(animated: true, completion: nil)
+            self.animateBackToCenter()
+        }
+        
+        myAlert.addAction(okAction)
+        
+        present(myAlert, animated: true, completion: nil)
+    }
+    
     // MARK: - UIActivityViewController
     
     func displaySharePopUp(image: UIImage) {
@@ -120,7 +139,6 @@ class ViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
         activityViewController.completionWithItemsHandler = { activity, completed, items, error in
             self.animateBackToCenter()
-            
         }
     }
     
@@ -137,7 +155,6 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     
     // Add image from Library
     @IBAction func importImage(_ sender: UIButton) {
-        imagePickerController.modalPresentationStyle = .overCurrentContext
         imagePickerController.sourceType = .photoLibrary
         tag = sender.tag
         present(imagePickerController, animated: true)
@@ -167,6 +184,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
         self.present(imagePickerController, animated: true)
     }
 }
+
 
     
 
