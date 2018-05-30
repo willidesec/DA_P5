@@ -17,12 +17,17 @@ class ViewController: UIViewController {
     // MARK: - Properties
     private var tag: Int? = nil
     private let imagePickerController = UIImagePickerController()
-    private  var swipeGestureRecognizer: UISwipeGestureRecognizer?
+    private var swipeGestureRecognizer: UISwipeGestureRecognizer?
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        controllerBehavior()
+    }
+    
+    // MARK: - Methods
+    
+    func controllerBehavior() {
         // Square Shadow
         gridView.addShadow()
         
@@ -35,29 +40,25 @@ class ViewController: UIViewController {
         // Swipe Grid
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
-        swipeGestureRecognizer.direction = .up
         gridView.addGestureRecognizer(swipeGestureRecognizer)
         
         // Notification when Device's Orientation did change
         NotificationCenter.default.addObserver(self, selector: #selector(deviceOrientationDidChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
         imagePickerController.delegate = self
-        
     }
     
-    // MARK: - Methods
-    
-    // A function to change the layout of the square view
+    // A function to change the layout of the grid view
     @IBAction func changeLayout(_ sender: UIButton) {
         layoutButtonNotSelected()
         switch sender.tag {
-        case 1:
+        case 0:
             gridView.displayPattern1()
             layoutButtons[0].isSelected = true
-        case 2:
+        case 1:
             gridView.displayPattern2()
             layoutButtons[1].isSelected = true
-        case 3:
+        case 2:
             gridView.displayPattern3()
             layoutButtons[2].isSelected = true
         default:
@@ -97,10 +98,10 @@ class ViewController: UIViewController {
             animateSwipe(translationX: 0, y: -view.frame.height)
         }
         
-        if !gridView.isAvailableToShare() {
-            displaySwipeErrorPopUp()
-        } else {
+        if gridView.isAvailableToShare() {
             share()
+        } else {
+            displaySwipeErrorPopUp()
         }
     }
     
@@ -167,8 +168,8 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
             gridView.addButtons[currentTag].isHidden = true
             
             // Make the ImageView clickable
-            let uiTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImage(_:)))
-            gridView.imageViews[currentTag].addGestureRecognizer(uiTapRecognizer)
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedImage(_:)))
+            gridView.imageViews[currentTag].addGestureRecognizer(tapRecognizer)
         }
         picker.dismiss(animated: true, completion: nil)
     }

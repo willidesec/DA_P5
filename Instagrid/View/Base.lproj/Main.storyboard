@@ -220,7 +220,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jac-y7-rJa" userLabel="Layout Button Stack View">
                                 <rect key="frame" x="47.5" y="523" width="280" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loL-dn-rwZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loL-dn-rwZ">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
@@ -228,7 +228,7 @@
                                             <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kss-y4-ISR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-pH-okb">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-pH-okb">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
@@ -236,7 +236,7 @@
                                             <action selector="changeLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dp-h5-0Qs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-uG-yx8">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-uG-yx8">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
