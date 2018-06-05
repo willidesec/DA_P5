@@ -22,12 +22,13 @@ class ViewController: UIViewController {
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayGrid()
         controllerBehavior()
     }
     
     // MARK: - Methods
     
-    func controllerBehavior() {
+    func displayGrid() {
         // Square Shadow
         gridView.addShadow()
         
@@ -36,7 +37,9 @@ class ViewController: UIViewController {
         
         gridView.displayPattern2()
         layoutButtons[1].isSelected = true
-        
+    }
+    
+    func controllerBehavior() {
         // Swipe Grid
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
@@ -86,6 +89,11 @@ class ViewController: UIViewController {
     @IBAction func resetButtonDidTapped(_ sender: UIButton) {
         gridView.resetImageViews()
         gridView.displayAddButtons()
+    }
+    
+    // A function to remove observer
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     
