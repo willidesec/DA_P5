@@ -14,3 +14,7 @@ Le but de ce projet est de concevoir une application iPhone nommée **Instagrid*
 - Une fois toute la grille rempli, l'utilisateur peut partager le résultat via ses applications préférées. Tant que toutes les emplacements photo ne sont pas remplis, il est impossible d'effectuer le partage.
 - Pour partager sa création, l'utilsateur doit swiper vers le haut, ou vers la gauche si l'iPhone est en mode paysage.
 
+## Bonus
+
+- Un bouton "Reset" a été ajouté pour enlever toutes les images qui ont été ajouté dans la grille
+- Une sécurité à été mise en place afin d'empêcher l'utilisateur de patager la grille si cette dernière n'est pas totalement remplie
