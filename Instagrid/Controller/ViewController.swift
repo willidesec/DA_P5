@@ -35,12 +35,13 @@ class ViewController: UIViewController {
         // Image Corner
         gridView.addViewCorner()
         
+        // Shox the grid with the pattern 2 and selected the second layout button
         gridView.displayPattern2()
         layoutButtons[1].isSelected = true
     }
     
     func controllerBehavior() {
-        // Swipe Grid
+        // Add a Swipe gesture to the grid
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(gridViewSwiped(_:)))
         guard let swipeGestureRecognizer = swipeGestureRecognizer else { return }
         gridView.addGestureRecognizer(swipeGestureRecognizer)
@@ -76,6 +77,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // Function to change the direction of the swipe gesture when the device orientation change
     @objc func deviceOrientationDidChange() {
         let currentOrientation = UIDevice.current.orientation
         if currentOrientation.isLandscape {
@@ -143,17 +145,17 @@ class ViewController: UIViewController {
     
     // MARK: - UIActivityViewController
     
+    private func share() {
+        guard let image = GridManager.convertGridViewToImage(gridView: gridView) else { return }
+        displaySharePopUp(image: image)
+    }
+    
     private func displaySharePopUp(image: UIImage) {
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
         activityViewController.completionWithItemsHandler = { activity, completed, items, error in
             self.animateBackToCenter()
         }
-    }
-    
-    private func share() {
-        guard let image = GridManager.convertGridViewToImage(gridView: gridView) else { return }
-        displaySharePopUp(image: image)
     }
     
 }
